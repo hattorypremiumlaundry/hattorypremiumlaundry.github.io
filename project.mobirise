@@ -1,7 +1,7 @@
 {
   "settings": {
     "name": "My Site",
-    "currentPage": "index.html",
+    "currentPage": "page4.html",
     "theme": {
       "name": "mobirise5",
       "title": "Mobirise 5",
@@ -573,7 +573,7 @@
     },
     "page1.html": {
       "settings": {
-        "title": "PRODUCT",
+        "title": "Product",
         "meta_descr": "",
         "header_custom": "",
         "footer_custom": "",
@@ -1092,7 +1092,7 @@
     },
     "page2.html": {
       "settings": {
-        "title": "ORDER",
+        "title": "Order Now",
         "meta_descr": "",
         "header_custom": "",
         "footer_custom": "",
@@ -1611,7 +1611,7 @@
     },
     "page3.html": {
       "settings": {
-        "title": "ABOUT US",
+        "title": "About Us",
         "meta_descr": "",
         "header_custom": "",
         "footer_custom": "",
@@ -2130,7 +2130,7 @@
     },
     "page4.html": {
       "settings": {
-        "title": "CONTACT US",
+        "title": "Contact Us",
         "meta_descr": "",
         "header_custom": "",
         "footer_custom": "",
