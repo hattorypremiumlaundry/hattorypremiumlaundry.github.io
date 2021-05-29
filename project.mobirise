@@ -1,7 +1,7 @@
 {
   "settings": {
     "name": "Hattory Premium Laundry",
-    "currentPage": "home.html",
+    "currentPage": "seller.html",
     "theme": {
       "name": "mobirise5",
       "title": "Mobirise 5",
@@ -62,7 +62,7 @@
   "pages": {
     "product.html": {
       "settings": {
-        "title": "Product",
+        "title": "Hattory Premium Laundry - Product",
         "meta_descr": "",
         "header_custom": "",
         "footer_custom": "",
@@ -707,7 +707,7 @@
     },
     "order.html": {
       "settings": {
-        "title": "Order",
+        "title": "Hattory Premium Laundry - Order",
         "meta_descr": "",
         "header_custom": "",
         "footer_custom": "",
@@ -1242,7 +1242,7 @@
     },
     "about.html": {
       "settings": {
-        "title": "About Us",
+        "title": "Hattory Premium Laundry - About Us",
         "meta_descr": "",
         "header_custom": "",
         "footer_custom": "",
@@ -1761,7 +1761,7 @@
     },
     "contact.html": {
       "settings": {
-        "title": "Contact Us",
+        "title": "Hattory Premium Laundry - Contact Us",
         "meta_descr": "",
         "header_custom": "",
         "footer_custom": "",
@@ -2281,7 +2281,7 @@
     "home.html": {
       "settings": {
         "main": true,
-        "title": "Home",
+        "title": "Hattory Premium Laundry - Home",
         "meta_descr": "",
         "header_custom": "",
         "footer_custom": "",
@@ -2800,7 +2800,7 @@
     },
     "reseller.html": {
       "settings": {
-        "title": "Reseller",
+        "title": "Hattory Premium Laundry - Reseller",
         "meta_descr": "",
         "header_custom": "",
         "footer_custom": "",
@@ -3611,7 +3611,7 @@
     },
     "seller.html": {
       "settings": {
-        "title": "Seller",
+        "title": "Hattory Premium Laundry - Seller",
         "meta_descr": "",
         "header_custom": "",
         "footer_custom": "",
