@@ -45,7 +45,7 @@
         "url": "https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i"
       }
     ],
-    "uniqCompNum": 88,
+    "uniqCompNum": 89,
     "versionPublish": "5.3.0",
     "imageResize": true,
     "screenshot": "screenshot.png",
@@ -1772,33 +1772,85 @@
         {
           "alias": false,
           "_styles": {
-            "& when not (@fullScreen)": {
-              "padding-top": "(@paddingTop * 1rem)",
-              "padding-bottom": "(@paddingBottom * 1rem)"
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = 'color')": {
+              "background": "@bg-value"
             },
             "& when (@bg-type = 'image')": {
               "background-image": "url(@bg-value)"
             },
-            "& when (@bg-type = 'color')": {
-              "background-color": "@bg-value"
+            ".row": {
+              "@media (max-width: 767px)": {
+                "flex-direction": "column-reverse",
+                ".map-wrapper": {
+                  "margin-bottom": "2rem"
+                }
+              }
             },
-            ".mbr-section-title": {
-              "color": "#ffc900",
-              "text-align": "left"
+            ".google-map": {
+              "height": "100%",
+              "position": "relative",
+              "iframe": {
+                "height": "100%",
+                "width": "100%"
+              },
+              "[data-state-details]": {
+                "color": "#6b6763",
+                "height": "1.5em",
+                "margin-top": "-0.75em",
+                "padding-left": "1.25rem",
+                "padding-right": "1.25rem",
+                "position": "absolute",
+                "text-align": "center",
+                "top": "50%",
+                "width": "100%"
+              },
+              "&[data-state]": {
+                "background": "#e9e5dc"
+              },
+              "&[data-state=\"loading\"]": {
+                "[data-state-details]": {
+                  "display": "none"
+                }
+              }
             },
-            ".mbr-text, .mbr-section-btn": {
-              "color": "#ffffff"
+            ".image-wrapper": {
+              "display": "flex",
+              "align-items": "center"
+            },
+            ".card-wrapper": {
+              "&:not(:nth-last-child(1))": {
+                "margin-bottom": "2rem"
+              },
+              "@media (max-width: 991px)": {
+                "padding": "1rem 2rem"
+              },
+              "@media (min-width: 992px)": {
+                "padding": "2rem 4rem"
+              },
+              "display": "flex",
+              "border-radius": "4px",
+              "background": "@cardsBg"
+            },
+            ".mbr-iconfont": {
+              "font-size": "2rem",
+              "padding-right": "1.5rem",
+              "color": "@primaryColor"
+            },
+            ".mbr-section-subtitle": {
+              "color": "#ffc900"
             }
           },
-          "_name": "header2",
+          "_name": "contacts3",
           "_sourceTheme": "mobirise5",
-          "_customHTML": "<section class=\"header2\" group=\"Headers\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\" checked>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\" condition=\"fullScreen == false\">\n\n        <input type=\"range\" inline name=\"textWidth\" title=\"Width\" min=\"4\" max=\"12\" value=\"9\" step=\"1\">\n        <select title=\"Align\" name=\"contentAlign\">\n            <option value selected>Left</option>\n            <option value=\"justify-content-center\">Center</option>\n            <option value=\"justify-content-end\">Right</option>\n        </select>\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubitle\">\n        <input type=\"checkbox\" title=\"Text\" name=\"showText\">\n        <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"@PROJECT_PATH@/assets/images/1-1-1920x1080.png\" selected>\n            <input type=\"color\" title=\"Color\" value=\"#ffffff\">\n            <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row {{contentAlign}}\">\n            <div class=\"col-12 col-lg-{{textWidth}}\">\n                <h1 class=\"mbr-section-title mbr-fonts-style mb-3\" data-app-selector=\".mbr-section-title\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\"><b>UNDER CONSTRUCTION</b></h1>\n                <h2 class=\"mbr-section-subtitle mbr-fonts-style mb-3\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-2\" mbr-if=\"showSubitle\">Header Subtitle</h2>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">Dengan formula 3 IN 1. Dapat digunakan\nsebagai Pelembut, Pelicin dan pewangi pakaian. Mengandung Kationik Surfaktan yang berfungsi untuk membunuh bakteri. Membantu pakaian tetap wangi baik\ndidalam lemari, maupun dipakai seharian.</p>\n                <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn mt-3\" mbr-if=\"showButtons\"><a class=\"btn btn-success\" href=\"page2.html\" data-app-placeholder=\"Type Text\">ORDER NOW!</a>\n                    <a class=\"btn btn-white-outline\" href=\"page1.html\" data-app-placeholder=\"Type Text\">PRODUCT &gt;</a></div>\n            </div>\n        </div>\n    </div>\n</section>",
-          "_cid": "svE0zNh5hq",
-          "_anchor": "header2-1e",
+          "_customHTML": "<section class=\"contacts3 map1\" group=\"Maps\">\n\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"3\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\">\n        <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\" checked>\n        <input type=\"color\" title=\"BG\" name=\"cardsBg\" value=\"#ffc900\">\n        <header>Map</header>\n        <input type=\"map\" title=\"Map\" name=\"googleMap\" place-id=\"<iframe src=&quot;https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15823.302876108914!2d111.4795721!3d-7.484488!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5bd8b1c261c1368b!2sHattory%20Young%20Creat!5e0!3m2!1sid!2sid!4v1622277190015!5m2!1sid!2sid&quot; width=&quot;600&quot; height=&quot;450&quot; style=&quot;border:0;&quot; allowfullscreen=&quot;&quot; loading=&quot;lazy&quot;></iframe>\" value=\"<iframe src=&quot;https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15823.302876108914!2d111.4795721!3d-7.484488!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5bd8b1c261c1368b!2sHattory%20Young%20Creat!5e0!3m2!1sid!2sid!4v1622277190015!5m2!1sid!2sid&quot; width=&quot;600&quot; height=&quot;450&quot; style=&quot;border:0;&quot; allowfullscreen=&quot;&quot; loading=&quot;lazy&quot;></iframe>\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"@PROJECT_PATH@/assets/images/4-1920x1080.jpg\" parallax selected>\n            <input type=\"color\" title=\"Color\" value=\"#ffffff\">\n            <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"mbr-section-head\" mbr-if=\"showTitle || showSubtitle\">\n            <h3 class=\"mbr-section-title mbr-fonts-style align-center mb-0\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">\n                <b>Contacts</b>\n            </h3>\n            <h4 class=\"mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-2\" mbr-theme-style=\"display-5\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\"><b>\n                Contact us</b></h4>\n        </div>\n        <div class=\"row justify-content-center mt-4\">\n            <div class=\"card col-12 col-md-6\">\n                <div class=\"card-wrapper\">\n                    <div class=\"image-wrapper\">\n                        <span mbr-icon class=\"mbr-iconfont mobi-mbri-globe mobi-mbri\"></span>\n                    </div>\n                    <div class=\"text-wrapper\">\n                        <h6 class=\"card-title mbr-fonts-style mb-1\" mbr-theme-style=\"display-5\" data-app-selector=\".card-title\">\n                            <b>Phone</b>\n                        </h6>\n                        <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\"><b>(+62) 877-7085-3957&nbsp;</b> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\n                    </div>\n                </div>\n                <div class=\"card-wrapper\">\n                    <div class=\"image-wrapper\">\n                        <span mbr-icon class=\"mbr-iconfont mobi-mbri-globe mobi-mbri\"></span>\n                    </div>\n                    <div class=\"text-wrapper\">\n                        <h6 class=\"card-title mbr-fonts-style mb-1\" mbr-theme-style=\"display-5\" data-app-selector=\".card-title\">\n                            <b>Email</b>\n                        </h6>\n                        <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\"><b>hpl@hatoryinventory.com</b></p>\n                    </div>\n                </div>\n            </div>\n            <div class=\"map-wrapper col-12 col-md-6\">\n                <div class=\"google-map\" mbr-map=\"googleMap\">\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "syMQMelj73",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
-          "_params": {}
+          "_params": {},
+          "_anchor": "contacts3-2g"
         },
         {
           "alias": false,
