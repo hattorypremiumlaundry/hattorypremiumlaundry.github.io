@@ -1,7 +1,7 @@
 {
   "settings": {
     "name": "Hattory Premium Laundry",
-    "currentPage": "seller.html",
+    "currentPage": "reseller.html",
     "theme": {
       "name": "mobirise5",
       "title": "Mobirise 5",
@@ -2872,7 +2872,7 @@
               }
             },
             ".mbr-section-title": {
-              "color": "#ffffff"
+              "color": "#ffc900"
             },
             ".card-title, .social-row": {
               "color": "#0b0b0b"
